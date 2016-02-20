@@ -2,31 +2,12 @@
 <br>
 <br>
 <h3> Here are some shitty fucking songs </h3>
-
-
-<!-- put a log in thingy here. -->
-<section class="container">
-  <div class="login">
-    <h1>Login to Shitty Songs</h1>
-    <form method="post" action="index.html">
-      <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-      <p><input type="password" name="password" value="" placeholder="Password"></p>
-      <p class="remember_me">
-        <label>
-          <input type="checkbox" name="remember_me" id="remember_me">
-          Remember me on this computer
-        </label>
-      </p>
-      <p class="submit"><input type="submit" name="commit" value="Login"></p>
-    </form>
-  </div>
-
-  <div class="login-help">
-    <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
-  </div>
-</section>
-
-
-<!-- <ul>
-  <li> <%= @users.all %> </li>
-</ul> -->
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>
+  </li>
+<% end %>
