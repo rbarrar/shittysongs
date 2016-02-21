@@ -1,12 +1,16 @@
 
-<% Video.all.each do |v| %>
+<% @videos.each do |v| %>
 <h2><%= v.artist_name %> - <%= v.song_name %></h2>
 <iframe width="640" height="360" src= "<%= v.url %>" frameborder="0" allowfullscreen></iframe>
 <p> <%= v.description %> </p>
+<p><%= commontator_thread(v) %></p>
 <% end %>
 
 
-<%= Video.all.name %>
+
+
+
+<!-- <%= Video.all %>
   <%  @videos.each do |video| %>
   <%= commontator_thread(video) %>
-  <% end %>
+  <% end %> -->
