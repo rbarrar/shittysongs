@@ -37,6 +37,11 @@ header p {
   width: 640px;
 }
 
+// @media (min-width: 992px)
+.col-md-6 {
+    width: 57%;
+}
+
 // #commontator_thread {
 //     background: #fff;
 //     border: 1px solid #eee;
