@@ -30,16 +30,30 @@ header p {
 }
 
 .video {
-  margin-left: 3em;
+  // margin-left: 3em;
+  height: 400px;
+}
+//
+// .video p {
+//   width: 640px;
+// }
+h2 {
+  margin-left: 15px;
 }
 
-.video p {
-  width: 640px;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 // @media (min-width: 992px)
 .col-md-6 {
     width: 57%;
+}
+
+.col-md-12 {
+    width: 100%;
 }
 
 // #commontator_thread {
