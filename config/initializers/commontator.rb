@@ -162,7 +162,7 @@ Commontator.configure do |config|
   # pos is the number of likes, or the rating, or the reputation
   # neg is the number of dislikes, if applicable, or 0 otherwise
   # Default: lambda { |thread, pos, neg| "%+d" % (pos - neg) }
-  config.vote_count_proc = lambda { |thread, pos, neg| "%+d" % (pos - neg) }
+  # config.vote_count_proc = lambda { |thread, pos, neg| "%+d" % (pos - neg) }
 
   # comment_order
   # Type: Symbol
@@ -254,7 +254,7 @@ Commontator.configure do |config|
   #   false (no mentions)
   #   true  (mentions enabled)
   # Default: false
-  config.mentions_enabled = true
+  config.mentions_enabled = false
 
   # user_mentions_proc
   # Type: Proc
