@@ -1,5 +1,5 @@
 <div class="border-form-div text-center">
-  <h2>Sign in</h2>
+  <h2 class="title">Sign in</h2>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <%= f.email_field :email, :autofocus => true %>
     <br>
@@ -10,9 +10,9 @@
       <%= f.submit "Sign in", :class=>'btn btn-primary' %>
       <br>
       <br>
-      <input type="hidden" value="0" name="user[remember_me]"></input>
-      <input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1"></input>
-      <label for="user_remember_me">Remember me</label>
+      <input class="title" type="hidden" value="0" name="user[remember_me]"></input>
+      <input class="title" id="user_remember_me" type="checkbox" name="user[remember_me]" value="1"></input>
+      <label class="title" for="user_remember_me">Remember me</label>
     <% end -%>
     <br>
     <!-- <%= f.submit "Sign in", :class=>'btn btn-primary' %>

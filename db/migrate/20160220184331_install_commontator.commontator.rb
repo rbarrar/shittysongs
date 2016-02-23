@@ -22,7 +22,7 @@ class InstallCommontator < ActiveRecord::Migration
 
     add_index  :commontator_comments, :cached_votes_up
     add_index  :commontator_comments, :cached_votes_down
-    
+
     create_table :commontator_subscriptions do |t|
       t.string   :subscriber_type, :null => false
       t.integer  :subscriber_id, :null => false
@@ -49,5 +49,5 @@ class InstallCommontator < ActiveRecord::Migration
     add_index :commontator_threads, [:commontable_id, :commontable_type],
               :unique => true,
               :name => 'index_commontator_threads_on_c_id_and_c_type'
-  end
+      end
 end
